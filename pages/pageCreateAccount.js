@@ -1,6 +1,7 @@
 import { footer } from "../components/footer.js";
 import { head } from "../components/head.js";
 import { header } from "../components/header.js";
+import { accountsData } from "../data/accountsData.js";
 
 export function pageCreateAccount() {
     const date = new Date();
@@ -8,6 +9,13 @@ export function pageCreateAccount() {
     const m = (date.getMonth() < 9 ? '0' : '') + (date.getMonth() + 1);
     const d = (date.getDate() < 10 ? '0' : '') + date.getDate();
     const maxDate = `${y}-${m}-${d}`;
+
+    accountsData.push({
+        name: 'Petras',
+        date: '2020-03-14',
+        rate: 2.73,
+        salary: '---',
+    });
 
     return `
         <!DOCTYPE html>
